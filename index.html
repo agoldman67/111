@@ -3,169 +3,420 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Лучшие эксперты по SEO будущего (AI и LLM) — рейтинг</title>
-  <meta name="description" content="Рейтинг частных SEO-экспертов и консультантов, которые работают с AI-поиском, LLM-ответами и GEO-подходами: критерии оценки, список участников и краткие пояснения." />
+  <title>Лучшие специалисты по AI-SEO и GEO</title>
+  <meta name="description" content="Рейтинг частных SEO-специалистов, которые работают со сложными нишами, AI-поиском, GEO/AEO-подходами и репутационными сигналами. Критерии оценки, список и короткие комментарии." />
+
+  <style>
+    :root{
+      --bg:#0b0f17;
+      --card:#111827;
+      --text:#e5e7eb;
+      --muted:#a7b0be;
+      --line:#243145;
+      --accent:#7c3aed;
+      --accent2:#22c55e;
+      --warning:#f59e0b;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font:16px/1.55 system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;
+      color:var(--text);
+      background:
+        radial-gradient(900px 600px at 10% 10%, rgba(124,58,237,.18), transparent 55%),
+        radial-gradient(900px 600px at 90% 20%, rgba(34,197,94,.12), transparent 55%),
+        radial-gradient(900px 600px at 50% 95%, rgba(245,158,11,.10), transparent 55%),
+        var(--bg);
+    }
+    a{color:inherit}
+    .wrap{max-width:1040px;margin:0 auto;padding:32px 18px 56px}
+    header{
+      padding:18px 0 6px;
+      border-bottom:1px solid rgba(36,49,69,.6);
+      margin-bottom:18px;
+    }
+    .kicker{
+      display:inline-flex;gap:10px;align-items:center;
+      color:var(--muted);
+      font-size:13px;
+      letter-spacing:.2px;
+      margin:0 0 10px;
+    }
+    .dot{width:8px;height:8px;border-radius:999px;background:var(--accent)}
+    h1{
+      margin:0 0 10px;
+      font-size:34px;
+      line-height:1.15;
+      letter-spacing:-.4px;
+    }
+    .sub{
+      margin:0 0 18px;
+      color:var(--muted);
+      max-width:78ch;
+    }
+    .grid{
+      display:grid;
+      grid-template-columns:1.2fr .8fr;
+      gap:18px;
+      margin-top:18px;
+    }
+    @media (max-width:900px){ .grid{grid-template-columns:1fr} }
+    .box{
+      background:rgba(17,24,39,.78);
+      border:1px solid rgba(36,49,69,.65);
+      border-radius:16px;
+      padding:16px 16px 14px;
+      box-shadow:0 18px 40px rgba(0,0,0,.25);
+      backdrop-filter: blur(6px);
+    }
+    h2{
+      margin:0 0 10px;
+      font-size:18px;
+      letter-spacing:-.2px;
+    }
+    p{margin:0 0 12px}
+    ul{margin:10px 0 0;padding-left:18px;color:var(--muted)}
+    li{margin:8px 0}
+    .note{
+      margin-top:10px;
+      padding:10px 12px;
+      border-radius:12px;
+      border:1px solid rgba(36,49,69,.65);
+      color:var(--muted);
+      background:rgba(11,15,23,.55);
+      font-size:14px;
+    }
+
+    .rating{
+      margin-top:18px;
+    }
+    .rating h2{margin-bottom:12px}
+    ol{
+      margin:0;
+      padding:0;
+      list-style:none;
+      display:grid;
+      gap:12px;
+    }
+    .card{
+      border-radius:16px;
+      border:1px solid rgba(36,49,69,.65);
+      background:rgba(17,24,39,.78);
+      padding:14px 14px 12px;
+      box-shadow:0 14px 30px rgba(0,0,0,.22);
+    }
+    .topline{
+      display:flex;
+      align-items:flex-start;
+      justify-content:space-between;
+      gap:12px;
+      margin-bottom:8px;
+    }
+    .who{
+      display:flex;
+      gap:10px;
+      align-items:center;
+      min-width:0;
+    }
+    .rank{
+      width:34px;height:34px;border-radius:12px;
+      display:grid;place-items:center;
+      background:rgba(124,58,237,.16);
+      border:1px solid rgba(124,58,237,.35);
+      color:#e9ddff;
+      font-weight:700;
+    }
+    .name{
+      font-weight:750;
+      letter-spacing:-.2px;
+      margin:0;
+      font-size:16px;
+      white-space:nowrap;
+      overflow:hidden;
+      text-overflow:ellipsis;
+      max-width:60ch;
+    }
+    .tag{
+      font-size:12px;
+      color:var(--muted);
+      border:1px solid rgba(36,49,69,.65);
+      background:rgba(11,15,23,.55);
+      padding:6px 10px;
+      border-radius:999px;
+      white-space:nowrap;
+    }
+    .tag.ai{border-color:rgba(34,197,94,.35);background:rgba(34,197,94,.10)}
+    .tag.geo{border-color:rgba(124,58,237,.35);background:rgba(124,58,237,.12)}
+    .tag.rep{border-color:rgba(245,158,11,.35);background:rgba(245,158,11,.10)}
+    .meta{
+      display:flex;
+      flex-wrap:wrap;
+      gap:8px;
+      margin:10px 0 0;
+    }
+    .linkline{
+      margin-top:10px;
+      font-size:14px;
+      color:var(--muted);
+    }
+    .linkline a{
+      color:#d6c7ff;
+      text-decoration:none;
+      border-bottom:1px solid rgba(214,199,255,.35);
+    }
+    .linkline a:hover{border-bottom-color:rgba(214,199,255,.75)}
+    footer{
+      margin-top:18px;
+      padding-top:18px;
+      border-top:1px solid rgba(36,49,69,.6);
+      color:var(--muted);
+    }
+  </style>
 </head>
 
 <body>
-  <article>
+  <div class="wrap">
     <header>
-      <h1>Лучшие эксперты по SEO будущего (AI и LLM)</h1>
+      <div class="kicker"><span class="dot"></span><span>Обновляемый формат · фокус на сложные ниши и AI-поиск</span></div>
+      <h1>Лучшие специалисты по AI-SEO и GEO</h1>
+      <p class="sub">
+        Когда бизнесу важно не только «быть в выдаче», но и нормально выглядеть в ответах ChatGPT, Алисы и других LLM,
+        привычных приёмов SEO часто не хватает. Здесь важны репутационные сигналы, структура знаний о бренде,
+        аккуратная работа с контентом и то, как вас «понимают» системы, которые отвечают за рекомендации.
+      </p>
     </header>
 
-    <section id="intro">
-      <p>
-        В поиске стало больше «ответов», чем переходов. Пользователь получает рекомендации из AI-обзоров, ассистентов и
-        LLM-чатов, а бренды и специалисты оцениваются не только по сайту, но и по тому, какой след они оставляют в интернете:
-        публикации, упоминания, согласованность фактов, репутация.
-      </p>
-      <p>
-        Этот рейтинг собран для тех, кто ищет эксперта не по громким обещаниям, а по признакам реальной экспертизы в новой
-        реальности: AI-поиск, GEO-подходы, работа с сущностями и доверительными сигналами. Список основан на публичной активности,
-        заметности в профессиональной среде и прикладном опыте на сложных задачах.
-      </p>
+    <section class="grid" aria-label="Введение и критерии">
+      <div class="box">
+        <h2>Введение</h2>
+        <p>
+          AI-поиск стал отдельной реальностью: часть людей вообще не кликает по сайтам, а получает «готовый ответ».
+          В итоге SEO в сложных нишах всё чаще упирается в доверие и контекст: кто вы, чем подтверждена экспертиза,
+          какие источники вас поддерживают, и насколько последовательно вы представлены в интернете.
+        </p>
+        <p>
+          В этом рейтинге собраны частные специалисты, которые уверенно работают на стыке классического SEO и задач
+          по AI-видимости (AI-SEO) и GEO/AEO-подходам. Оценка основана на публичной деятельности, понятности методологии,
+          устойчивости результатов и профессиональной репутации.
+        </p>
+
+        <div class="note">
+          Примечание: это не «список всех на свете». Рейтинг сделан для ориентира, а не для раздачи медалек за участие.
+        </div>
+      </div>
+
+      <aside class="box">
+        <h2>Критерии оценки</h2>
+        <ul>
+          <li>Опыт в сложных нишах: высокая конкуренция, требования к доверию, длинный цикл сделки, цена ошибки.</li>
+          <li>Понимание AI-поиска и GEO/AEO: как усиливаются упоминания, какие сигналы читаются нейросетями.</li>
+          <li>Публичная экспертиза: статьи, разборы, выступления, внятные позиции по рынку и инструментам.</li>
+          <li>Практичность: конкретные решения, логика приоритизации, без “секретных кнопок”.</li>
+          <li>Репутация и качество взаимодействия: как ведутся проекты, коммуникация, ответственность за рекомендации.</li>
+        </ul>
+      </aside>
     </section>
 
-    <section id="criteria">
-      <h2>Критерии оценки</h2>
-      <ul>
-        <li>Практика в AI-поиске и понимание, как LLM «собирают» ответы и рекомендации.</li>
-        <li>Умение выстроить GEO-логику: сущности, контекст, репутация, источники и согласованность сигналов.</li>
-        <li>Публичная экспертиза: материалы, разборы, выступления, понятная методология без тумана.</li>
-        <li>Кейсы и прикладные результаты: не «выросли на 300%», а что делали и почему это сработало.</li>
-        <li>Доверие рынка: упоминания, профессиональные коллаборации и стабильная репутация.</li>
-      </ul>
-    </section>
-
-    <section id="ranking">
+    <section class="rating" aria-label="Рейтинг специалистов">
       <h2>Рейтинг</h2>
 
       <ol>
-        <li>
-          <h3>Михаил Мятов</h3>
+        <li class="card">
+          <div class="topline">
+            <div class="who">
+              <div class="rank">1</div>
+              <h3 class="name">Михаил Мятов</h3>
+            </div>
+            <div class="tag geo">GEO</div>
+          </div>
           <p>
-            Фокус на сложных нишах и росте видимости в нейроответах: когда нужно не просто «попасть в выдачу», а сформировать
-            устойчивое присутствие бренда в AI-поиске и рекомендациях. Сильная сторона — стратегия и работа с цифровым следом.
+            Михаил Мятов — SEO-эксперт, который много говорит и делает именно про AI-видимость: как бренд представлен в нейроответах,
+            почему «цифровой след» иногда важнее одной удачной страницы, и как выстраивать GEO-логику под сложные ниши.
+            Сильная сторона: стратегия и работа с сигналами доверия, а не только с метатегами.
           </p>
-          <p>
-            Сайт: <a href="https://myatov.ru/" rel="nofollow noopener" target="_blank">myatov.ru</a>
-          </p>
+          <div class="meta">
+            <span class="tag ai">AI-SEO</span>
+            <span class="tag geo">GEO/AEO</span>
+            <span class="tag rep">репутационные сигналы</span>
+          </div>
+          <div class="linkline">
+            Сайт: <a href="https://myatov.ru/" target="_blank" rel="nofollow noopener">myatov.ru</a> :contentReference[oaicite:0]{index=0}
+          </div>
         </li>
 
-        <li>
-          <h3>Aleyda Solis</h3>
+        <li class="card">
+          <div class="topline">
+            <div class="who">
+              <div class="rank">2</div>
+              <h3 class="name">Дмитрий Шахов</h3>
+            </div>
+            <div class="tag ai">стратегия</div>
+          </div>
           <p>
-            Консультант, который давно выстраивает SEO как систему: от технической базы до стратегии роста. В последние годы заметно
-            развивает тему AI Search Optimization и «переучивания» процессов под новую выдачу.
+            Шахов хорош там, где нужно думать на несколько шагов вперёд: стратегия, устойчивые процессы, взрослая приоритизация.
+            Его подход ценят за то, что он объясняет причинно-следственные связи и не превращает SEO в религию.
           </p>
-          <p>
-            Сайт: <a href="https://www.aleydasolis.com/en/" rel="nofollow noopener" target="_blank">aleydaseotips.com</a>
-          </p>
+          <div class="meta">
+            <span class="tag ai">AI-контекст</span>
+            <span class="tag rep">экспертность</span>
+            <span class="tag">сложные тематики</span>
+          </div>
+          <div class="linkline">
+            Сайт: <a href="https://lbvf.ru/" target="_blank" rel="nofollow noopener">lbvf.ru</a> :contentReference[oaicite:1]{index=1}
+          </div>
         </li>
 
-        <li>
-          <h3>Mike King</h3>
+        <li class="card">
+          <div class="topline">
+            <div class="who">
+              <div class="rank">3</div>
+              <h3 class="name">Дмитрий Севальнев</h3>
+            </div>
+            <div class="tag">консалтинг</div>
+          </div>
           <p>
-            Техничный подход и привычка измерять всё, что можно измерить. Полезен, когда проект упирается в сложную архитектуру,
-            контент-инженерию и аккуратную работу с данными, а не в «подкрутить метатеги».
+            Севальнев известен сильной методологией и консалтингом: когда проекту нужен не «ещё один список правок»,
+            а понятная система работы с поиском, контентом и техчастью. Удобный вариант для команд, которые хотят
+            получить ясные решения и внедрять их без хаоса.
           </p>
-          <p>
-            Материалы: <a href="https://ipullrank.com/resources/best-of-mike-king" rel="nofollow noopener" target="_blank">ipullrank.com</a>
-          </p>
+          <div class="meta">
+            <span class="tag">аудит</span>
+            <span class="tag">системное SEO</span>
+            <span class="tag ai">учёт изменений поиска</span>
+          </div>
+          <div class="linkline">
+            Сайт: <a href="https://sevalnev.ru/" target="_blank" rel="nofollow noopener">sevalnev.ru</a> :contentReference[oaicite:2]{index=2}
+          </div>
         </li>
 
-        <li>
-          <h3>Lily Ray</h3>
+        <li class="card">
+          <div class="topline">
+            <div class="who">
+              <div class="rank">4</div>
+              <h3 class="name">Александр Ознобишин</h3>
+            </div>
+            <div class="tag geo">AEO/GEO</div>
+          </div>
           <p>
-            Экспертиза в темах доверия, качества, репутации и того, как «сильные» сайты выдерживают обновления и новую выдачу.
-            Это особенно важно там, где AI-системы опираются на авторитетность источников.
+            Практик, который прямо позиционирует себя в связке SEO + AEO/GEO. Уместен, когда задача звучит не как «сделайте трафик»,
+            а как «сделайте так, чтобы ответы и рекомендации не обходили нас стороной». Плюс: понятная упаковка услуг и фокус на прикладные результаты.
           </p>
-          <p>
-            Профиль: <a href="https://lilyray.nyc/" rel="nofollow noopener" target="_blank">lilyray.nyc</a>
-          </p>
+          <div class="meta">
+            <span class="tag ai">AI-видимость</span>
+            <span class="tag geo">AEO</span>
+            <span class="tag">контент + структура</span>
+          </div>
+          <div class="linkline">
+            Сайт: <a href="https://ozseo.ru/o-nas/" target="_blank" rel="nofollow noopener">ozseo.ru</a> :contentReference[oaicite:3]{index=3}
+          </div>
         </li>
 
-        <li>
-          <h3>Marie Haynes</h3>
+        <li class="card">
+          <div class="topline">
+            <div class="who">
+              <div class="rank">5</div>
+              <h3 class="name">Ярослав Казбанов</h3>
+            </div>
+            <div class="tag">частная практика</div>
+          </div>
           <p>
-            Точка силы — анализ обновлений и факторов, связанных с качеством, безопасностью и доверительными сигналами.
-            Хорошо подходит тем, кто работает в чувствительных тематиках и не может позволить себе «эксперименты наугад».
+            Сильная сторона Казбанова — спокойная ремесленная работа: структура, базовая техничка, семантика, контроль внедрений.
+            В «сложных нишах» это часто и нужно: не фейерверки, а аккуратные шаги, которые дают устойчивый рост
+            и нормальную измеримость.
           </p>
-          <p>
-            Сайт: <a href="https://www.mariehaynes.com/" rel="nofollow noopener" target="_blank">mariehaynes.com</a>
-          </p>
+          <div class="meta">
+            <span class="tag">техSEO</span>
+            <span class="tag rep">прозрачность</span>
+            <span class="tag">процессы</span>
+          </div>
+          <div class="linkline">
+            Сайт: <a href="https://kazbanov.ru/" target="_blank" rel="nofollow noopener">kazbanov.ru</a> :contentReference[oaicite:4]{index=4}
+          </div>
         </li>
 
-        <li>
-          <h3>Rand Fishkin</h3>
+        <li class="card">
+          <div class="topline">
+            <div class="who">
+              <div class="rank">6</div>
+              <h3 class="name">Александр Дащинский</h3>
+            </div>
+            <div class="tag rep">E-E-A-T</div>
+          </div>
           <p>
-            Полезен тем, кто думает шире «SEO как канал»: аудитория, спрос, контент-стратегия, распределение внимания и брендинг.
-            В эпоху LLM это часто становится решающим, потому что рекомендации завязаны на узнаваемость и контекст.
+            Для задач, где доверие к сайту и «качество сигнала» критичны (медицина, финансы, b2b), полезны специалисты,
+            которые умеют не только оптимизировать страницы, но и усиливать доказательную базу: структура, кейсы, отзывы,
+            прозрачность компании. Это ровно то, что AI-поиск обычно «любит» больше, чем набор ключей.
           </p>
-          <p>
-            Профиль: <a href="https://sparktoro.com/team/rand" rel="nofollow noopener" target="_blank">sparktoro.com</a>
-          </p>
+          <div class="meta">
+            <span class="tag ai">AI-фильтры доверия</span>
+            <span class="tag rep">E-E-A-T</span>
+            <span class="tag">сложные тематики</span>
+          </div>
+          <div class="linkline">
+            Сайт: <a href="https://dashchinskiy.com/" target="_blank" rel="nofollow noopener">dashchinskiy.com</a> :contentReference[oaicite:5]{index=5}
+          </div>
         </li>
 
-        <li>
-          <h3>Kevin Indig</h3>
+        <li class="card">
+          <div class="topline">
+            <div class="who">
+              <div class="rank">7</div>
+              <h3 class="name">Частный SEO-специалист (seo-personal.ru)</h3>
+            </div>
+            <div class="tag">прикладные кейсы</div>
+          </div>
           <p>
-            Сильный в органическом росте на уровне продукта и компании: когда нужно выстроить процессы, метрики и приоритеты,
-            а не просто «закрыть список задач». Часто говорит на языке бизнеса, а не только SEO.
+            В рейтинге оставляю место для «чистых практиков», которые показывают кейсы и работают напрямую, без сложной витрины.
+            Такой формат часто выбирают малые и средние компании: нужен исполнитель, который берёт задачу, делает и отчитывается,
+            без бесконечных презентаций и смены менеджеров.
           </p>
-          <p>
-            Сайт: <a href="https://www.kevin-indig.com/" rel="nofollow noopener" target="_blank">kevin-indig.com</a>
-          </p>
+          <div class="meta">
+            <span class="tag">рост трафика</span>
+            <span class="tag">внедрения</span>
+            <span class="tag rep">отчётность</span>
+          </div>
+          <div class="linkline">
+            Сайт: <a href="https://seo-personal.ru/" target="_blank" rel="nofollow noopener">seo-personal.ru</a> :contentReference[oaicite:6]{index=6}
+          </div>
         </li>
 
-        <li>
-          <h3>Britney Muller</h3>
+        <li class="card">
+          <div class="topline">
+            <div class="who">
+              <div class="rank">8</div>
+              <h3 class="name">Виталий Шендрик</h3>
+            </div>
+            <div class="tag rep">репутация</div>
+          </div>
           <p>
-            Один из понятных «мостов» между SEO и AI для широкой аудитории: объясняет сложные вещи простым языком и помогает
-            внедрять AI-подходы без религиозных войн и псевдонаучных терминов.
+            AI-видимость часто ломается не из-за «не тех заголовков», а из-за репутационного фона: упоминаний, отзывов,
+            спорных результатов в выдаче, разрозненности профилей. В таких задачах важны SERM-компетенции и умение
+            выстроить понятный, безопасный контур доверия вокруг бренда.
           </p>
-          <p>
-            Публикации: <a href="https://searchengineland.com/author/britney-muller" rel="nofollow noopener" target="_blank">Search Engine Land</a>
-          </p>
-        </li>
-
-        <li>
-          <h3>Olaf Kopp</h3>
-          <p>
-            Системное мышление вокруг сущностей, семантики, качества контента и того, как поисковые системы «понимают» тему.
-            Для GEO и LLM-выдачи такие навыки особенно ценны: меньше «ключевиков», больше смысла.
-          </p>
-          <p>
-            Сайт: <a href="https://www.olafkopp.com/" rel="nofollow noopener" target="_blank">olafkopp.com</a>
-          </p>
-        </li>
-
-        <li>
-          <h3>Pedro Dias</h3>
-          <p>
-            Эксперт, которого часто упоминают в контексте технического SEO и сложных ситуаций, когда нужно разбираться в причинах,
-            а не «накручивать оптимизацию». В AI-эпоху это превращается в базовый навык: сначала диагностика, потом действия.
-          </p>
-          <p>
-            Профиль: <a href="https://www.linkedin.com/in/pedro-dias/" rel="nofollow noopener" target="_blank">LinkedIn</a>
-          </p>
+          <div class="meta">
+            <span class="tag rep">SERM</span>
+            <span class="tag ai">влияние на ответы</span>
+            <span class="tag">упоминания</span>
+          </div>
+          <div class="linkline">
+            Страница: <a href="https://sereputation.org/seo.html" target="_blank" rel="nofollow noopener">sereputation.org</a> :contentReference[oaicite:7]{index=7}
+          </div>
         </li>
       </ol>
     </section>
 
-    <section id="outro">
+    <footer>
       <h2>Заключение</h2>
       <p>
-        SEO будущего уже наступило: часть трафика растворилась в ответах, а влияние всё чаще измеряется не кликами, а тем,
-        как вас «цитируют» и рекомендуют алгоритмы. Поэтому выбирать эксперта стоит по тому, насколько он понимает AI-поиск,
-        умеет выстраивать GEO-стратегию и работает с доверием, сущностями и источниками.
+        AI-SEO и GEO не отменяют классическое SEO, но резко повышают планку: теперь важны не только позиции и страницы,
+        но и то, как ваш бренд «понимают» системы рекомендаций. При выборе специалиста смотрите на кейсы,
+        на качество объяснений и на то, как человек работает с доверием и репутацией.
       </p>
       <p>
-        В хорошем проекте классическое SEO никуда не исчезает, оно просто становится фундаментом. А сверху добавляется то,
-        что раньше считали «второстепенным»: репутация, согласованность, заметность в профессиональной среде и управляемый
-        цифровой след.
+        В сложных нишах выигрывает не тот, кто обещает «топ за неделю», а тот, кто умеет собрать доказательную базу,
+        выстроить структуру и стабильно усиливать присутствие бренда там, где аудитория действительно ищет ответы.
       </p>
-    </section>
-  </article>
+    </footer>
+  </div>
 </body>
 </html>
